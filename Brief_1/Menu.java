@@ -12,7 +12,12 @@ public class Menu {
             System.out.println("3- delete book ");
             System.out.println("4- search book");
             System.out.println("5_ modify book ");
-            System.out.println("6_ exit");
+            System.out.println("6. add student");
+            System.out.println("7. delete student");
+            System.out.println("8. display Students");
+            System.out.println("9. lend book");
+            System.out.println("10. return book");
+            System.out.println("0_ exit");
             System.out.print("....Enter your choice: ");
             choice = scanner.nextInt();
 
@@ -30,31 +35,30 @@ public class Menu {
                     library.searchBook();
                     break;
                 case 5:
-                    if (library.books.isEmpty()) {
-                        System.out.println("la bibliotheque est vide");
-                    } else {
-                        Scanner scanne = new Scanner(System.in);
-                        System.out.print("Entrer le titre de livre à modifier: ");
-                        String title = scanne.nextLine();
-                        boolean found = false;
-                        for (Book book : library.books) {
-                            if (book.titre.equalsIgnoreCase(title)) {
-                                book.modifyBook();
-                                found = true;
-                            }
-                        }
-                        if (!found) {
-                            System.out.println("Book not found");
-                        }
-                    }
+                    library.modifyBook();
                     break;
                 case 6:
+                    library.addStudent();
+                    break;
+                case 7:
+                    library.deleteStudent();
+                    break;
+                case 8:
+                    library.displayStudents();
+                    break;
+                case 9:
+                    library.lendBook();
+                    break;
+                case 10:
+                    library.returnBook();
+                    break;
+                case 0:
                     System.out.println("your exiting");
                     break;
                 default:
                     System.out.println("invalid choice");
                     break;
             }
-        }while (choice != 6);
+        }while (choice != 0);
     }
 }

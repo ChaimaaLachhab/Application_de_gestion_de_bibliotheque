@@ -1,4 +1,5 @@
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 class Book {
@@ -6,13 +7,17 @@ class Book {
     String auteur;
     String isbn;
     String publicationDate;
+    String emprunteur;
+    boolean isBooked;
 
     public Book(String titre, String auteur, String isbn, String publicationDate){
         this.titre=titre;
         this.auteur=auteur;
         this.isbn=isbn;
         this.publicationDate=publicationDate;
+        this.isBooked=false;
     }
+
     public void modifyBook() {
                     Scanner scanner = new Scanner(System.in);
                     System.out.print("Entrer new titre: ");
