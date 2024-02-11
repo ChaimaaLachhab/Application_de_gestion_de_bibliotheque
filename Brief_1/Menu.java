@@ -1,24 +1,25 @@
 import java.util.Scanner;
-//import java.util.ArrayList;
+
 public class Menu {
     public static void main(String[] args) {
         Library library = new Library();
         int choice;
         Scanner scanner = new Scanner(System.in);
         do {
-            System.out.println("........MENU.........");
-            System.out.println("1- add book ");
-            System.out.println("2- display books ");
-            System.out.println("3- delete book ");
-            System.out.println("4- search book");
-            System.out.println("5_ modify book ");
-            System.out.println("6. add student");
-            System.out.println("7. delete student");
-            System.out.println("8. display Students");
-            System.out.println("9. lend book");
-            System.out.println("10. return book");
-            System.out.println("0_ exit");
-            System.out.print("....Enter your choice: ");
+            System.out.println();
+            System.out.println(".................................................MENU....................................................");
+            System.out.println();
+            System.out.println("..............BOOK.............................STUDENT............................RESERVATION............");
+            System.out.println(".        1- add book              ..                                 ..                                 .");
+            System.out.println(".        2- delete book           ..        6. add student           ..        9. borrow book             .");
+            System.out.println(".        3- search book           ..        7. delete student        ..        10. return book          .");
+            System.out.println(".        4_ modify book           ..        8. display Students      ..        11. display borrow book  .");
+            System.out.println(".        5- display books         ..                                 ..                                 .");
+            System.out.println(".........................................................................................................");
+            System.out.println();
+            System.out.println("....................................             0. Exit             ....................................");
+            System.out.println();
+            System.out.print("..............Enter your choice: ");
             choice = scanner.nextInt();
 
             switch (choice) {
@@ -26,16 +27,16 @@ public class Menu {
                     library.addBook();
                     break;
                 case 2:
-                    library.displayBooks();
-                    break;
-                case 3:
                     library.deleteBook();
                     break;
-                case 4:
+                case 3:
                     library.searchBook();
                     break;
-                case 5:
+                case 4:
                     library.modifyBook();
+                    break;
+                case 5:
+                    library.displayBooks();
                     break;
                 case 6:
                     library.addStudent();
@@ -47,10 +48,13 @@ public class Menu {
                     library.displayStudents();
                     break;
                 case 9:
-                    library.lendBook();
+                    library.borrowBook();
                     break;
                 case 10:
                     library.returnBook();
+                    break;
+                case 11:
+                    library.displayBookBr();
                     break;
                 case 0:
                     System.out.println("your exiting");
