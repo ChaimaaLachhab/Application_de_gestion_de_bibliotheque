@@ -140,28 +140,40 @@ class Library {
 
     void deleteStudent() {
         if (students.isEmpty()) {
-            System.out.println("La liste des étudiants est vide");
+            System.out.println("La liste des Student est vide");
         } else {
             Scanner scanner = new Scanner(System.in);
-            System.out.print("Enter the name of the student to delete: ");
+            System.out.print("Entrer le nom de student à supprimer : ");
             String nom = scanner.nextLine();
+            System.out.print("Entrer le titre de book à rendre : ");
+            String titre = scanner.nextLine();
 
             for (int i = 0; i < students.size(); i++) {
-                if (students.get(i).nom.equalsIgnoreCase(nom)) {
-//                    if (!students.get(i).bookLend.isEmpty()) {
-//                        for (Book book : students.get(i).bookLend) {
-//                            book.isBooked = false;
-//                            book.emprunteur = null;
-//                        }
-//                    }
+                if (students.get(i) != null && students.get(i).nom.equalsIgnoreCase(nom)) {
                     students.remove(i);
-                    System.out.println("Student deleted successfully.");
+                    System.out.println("suppression avec succes");
+                    boolean bookFound = false;
+                    for (int j = 0; j < student.borrowBook.size(); j++) {
+                        Book book = student.borrowBook.get(j);
+                        if (book != null && book.titre.equalsIgnoreCase(titre)) {
+                            student.borrowBook.remove(j);
+                            book.isBooked = false;
+                            book.emprunteur = null;
+                            System.out.println("Book return avec succes");
+                            bookFound = true;
+                            break;
+                        }
+                    }
+                    if (!bookFound) {
+                        System.out.println("Aucun book emprunte");
+                    }
                     return;
                 }
             }
             System.out.println("Student not found.");
         }
     }
+
 
 
     public void borrowBook(){
@@ -184,7 +196,7 @@ class Library {
                 return;
             }
 
-            System.out.println("entre le titre du student à emprunter :");
+            System.out.println("Entrer le titre du student à emprunter :");
             String titre = scanner.nextLine();
             boolean bookTrouve = false;
             for (Book booki : books) {
@@ -204,14 +216,14 @@ class Library {
             }
 
             if (!bookTrouve) {
-                System.out.println("le book ne trouve pas");
+                System.out.println("Le book ne trouve pas");
             }
         }
     }
 
     public void returnBook(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("entre le titre de book à rendre");
+        System.out.println("Entrer le titre de book à rendre");
         String titre = scanner.nextLine();
         for (int i = 0; i < student.borrowBook.size(); i++) {
             Book book = student.borrowBook.get(i);
@@ -227,14 +239,14 @@ class Library {
 
     public void displayBookBr(){
         if(student.borrowBook.isEmpty()){
-            System.out.println("la lise des booklend est vide");
+            System.out.println("La liste des books empruntés est vide");
         }else{
             boolean bookRe = false;
-            System.out.println("la liste de reservation :");
+            System.out.println("la liste des emprunts :");
             for (int i=0; i<books.size(); i++) {
                 if (books.get(i).isBooked) {
                     System.out.println();
-                    System.out.println("reseve N-"+ (i+1));
+                    System.out.println("Emprunt N-"+ (i+1));
                     System.out.println("Emprunteur : " + books.get(i).emprunteur);
                     System.out.println("Titre : " + books.get(i).titre);
                     System.out.println("Auteur : " + books.get(i).auteur);
@@ -243,7 +255,7 @@ class Library {
                 }
             }
             if (!bookRe) {
-                System.out.println("Aucun book reservé");
+                System.out.println("Aucun book emprunté");
             }
         }
     }

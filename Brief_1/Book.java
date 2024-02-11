@@ -19,6 +19,8 @@ class Book {
 
 
 
+
+
     public void modifyBook() {
                     Scanner scanner = new Scanner(System.in);
                     System.out.print("Entrer new titre: ");

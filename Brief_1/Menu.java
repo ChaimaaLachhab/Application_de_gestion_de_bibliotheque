@@ -9,15 +9,15 @@ public class Menu {
             System.out.println();
             System.out.println(".................................................MENU....................................................");
             System.out.println();
-            System.out.println("..............BOOK.............................STUDENT............................RESERVATION............");
+            System.out.println("..............BOOK.............................STUDENT.............................Emprunt...............");
             System.out.println(".        1- add book              ..                                 ..                                 .");
-            System.out.println(".        2- delete book           ..        6. add student           ..        9. borrow book             .");
+            System.out.println(".        2- delete book           ..        6. add student           ..        9. borrow book           .");
             System.out.println(".        3- search book           ..        7. delete student        ..        10. return book          .");
             System.out.println(".        4_ modify book           ..        8. display Students      ..        11. display borrow book  .");
             System.out.println(".        5- display books         ..                                 ..                                 .");
             System.out.println(".........................................................................................................");
             System.out.println();
-            System.out.println("....................................             0. Exit             ....................................");
+            System.out.println("....................................           0. Exit             ......................................");
             System.out.println();
             System.out.print("..............Enter your choice: ");
             choice = scanner.nextInt();
