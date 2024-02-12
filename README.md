@@ -42,11 +42,11 @@ Ce projet est une application de gestion de bibliothèque permettant aux utilisa
 
 ## Comment utiliser
 
-Clonez ce dépôt avec la commande git clone https://github.com/chaimalac/Application_de_gestion_de_bibliotheque.git.
-Accédez au répertoire du projet avec la commande  cd chemin/vers/le/dossier.
-Compilez le code source avec la commande javac Menu.java.
-Exécutez le programme avec la commande java Menu.
-Suivez les instructions affichées dans la console pour utiliser l'application.
+1. Clonez ce dépôt avec la commande git clone https://github.com/chaimalac/Application_de_gestion_de_bibliotheque.git.
+2. Accédez au répertoire du projet avec la commande  cd chemin/vers/le/dossier.
+3. Compilez le code source avec la commande javac Menu.java.
+4. Exécutez le programme avec la commande java Menu.
+5. Suivez les instructions affichées dans la console pour utiliser l'application.
 
 ## Exigences
 
