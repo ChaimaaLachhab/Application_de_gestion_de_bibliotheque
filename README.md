@@ -42,10 +42,11 @@ Ce projet est une application de gestion de bibliothèque permettant aux utilisa
 
 ## Comment utiliser
 
-1. Clonez ce dépôt sur votre machine locale.
-2. Compilez les fichiers Java avec votre environnement de développement Java préféré ou utilisez une ligne de commande.
-3. Exécutez le fichier `Menu.java` pour lancer le programme.
-4. Suivez les instructions du menu pour utiliser les différentes fonctionnalités.
+Clonez ce dépôt avec la commande git clone https://github.com/chaimalac/Application_de_gestion_de_bibliotheque.git.
+Accédez au répertoire du projet avec la commande  cd chemin/vers/le/dossier.
+Compilez le code source avec la commande javac Menu.java.
+Exécutez le programme avec la commande java Menu.
+Suivez les instructions affichées dans la console pour utiliser l'application.
 
 ## Exigences
 
@@ -53,5 +54,5 @@ Ce projet est une application de gestion de bibliothèque permettant aux utilisa
 
 ## Auteur
 
-Cette application a été développée par CHAIMAA LACHHAB
+Cette application a été développée par CHAIMAA LACHHAB, sous la supervision de l'école ENAA Béni Mellal.
 
